@@ -1,0 +1,264 @@
+body{
+    background:#efefef;
+}
+.logo{
+    position: absolute;
+    top:30px;
+    right:30px;
+    border-radius: 50%;
+    width:40px;
+    height: 40px;
+    box-shadow: 0 0 5px #555;
+}
+.container{
+    background-color: #fff;
+    width:900px;
+    height: 600px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 40px;
+}
+.bg-rotate{
+    position: absolute;
+    top: -64px;
+    left: -130px;
+    width: 500px;
+    height: 500px;
+    border-radius: 30% 70% 25% 75% / 49% 35% 65% 51%;
+    /* background-image: linear-gradient(to bottom, #511EAB, #AF0EA1); */
+    transition: 1s;
+    transform: rotate(0deg);
+    z-index: -1;
+
+}
+.background-rotate{
+    width:500px;
+    height: 500px;
+    position: absolute;
+    overflow: hidden;border-top-left-radius: 40px;
+}
+.list-left .group img{
+    width:200px;
+   
+}
+.list-left .group .item:nth-child(1) img, .list-left .group .item:nth-child(3) img{
+    position: absolute;
+    filter:blur(3px);
+    width: 100px;
+}
+.list-left .group .item:nth-child(2){
+    position: absolute;
+    top:0%;
+    left:-200px;
+    opacity: 0;
+
+}
+.list-left .group .item:nth-child(3){
+    position: absolute;
+    top:0%;
+    left:0%;
+    opacity: 0;
+
+}
+.list-left .group .item:nth-child(1){
+    position: absolute;
+    top:30%;
+    left:-20%;
+    opacity: 0;
+
+}
+.active  .item:nth-child(1){
+    animation: img1 4s linear 1 forwards;
+}
+.active  .item:nth-child(2){
+    animation: img2 4s linear 1 forwards;
+}
+.active  .item:nth-child(3){
+    animation: img3 4s linear 1 forwards;
+}
+.list-left .group .item:nth-child(2) img:nth-child(2){
+    position: absolute;
+    top: 72%;
+    left: 14px;
+    filter: blur(35px);
+    opacity: 0.6;
+    height: 110px;
+}
+.list-left .group .item:nth-child(2){
+}
+.list-left .group{
+    width:500px;
+    height:500px;
+    position: absolute;
+    transform: 0.5s;
+    
+}
+@keyframes img2{
+    0%{
+        top:0%;
+        left:-200px; opacity: 0;transform: rotate(0);
+    }
+    10%{
+        top: -19%;
+        left: -26%; 
+    }
+    15%{
+        top: -24%;
+    }
+    20%{opacity: 1;
+        top: -19%;
+        left: 16%;
+    }
+    30%{
+        top: 12%;
+        left: 35%;
+        transform: rotate(0);
+    }
+    60%{
+        top: 36%;
+    left: 32%; transform: rotate(-20deg);
+    }
+    70%{
+        top: 56%;
+        left: 27%;
+    }
+    80%{
+    opacity: 1;
+    top: 66%;
+    }
+    90%{
+        top: 46%;
+    left: -33%; 
+    }
+    100%{
+        top: 36%;
+    left: -33%;
+        opacity: 0;transform: rotate(-20deg);
+    }
+}
+@keyframes img3{
+    0%{
+        top:0%;
+    left:0%;
+    }
+    20%{opacity: 1;
+        top: -19%;
+        left: 16%;
+    }
+    35%{
+        left: 40%;
+    }
+    50%{
+        top: 42%;
+        left: 37%;
+        transform: rotate(-45deg);
+    }
+    70%{
+        top: 76%;
+        left: 27%;
+    }
+    80%{
+    opacity: 1;
+    top: 85%;
+    }
+    100%{
+        top: 26%;
+    left: -38%;
+        opacity: 0;transform: rotate(-20deg);
+    }
+}
+@keyframes img1{
+    0%{
+        top:30%;
+        left:-20%;
+        opacity: 0;
+    }
+    10%{opacity: 1;
+        top:0%;
+    }
+    15%{
+        top:-10%;
+        left:10%;
+        opacity: 1;
+    }
+    60%{
+        top:20%;
+        left:40%;
+    }
+    70%{
+        top:40%;
+        left:35%;
+    }
+    80%{
+        top:60%;
+        left:15%;
+    }
+    90%{
+        top:70%;
+        left:-15%;
+    }
+    100%{
+        top:40%;
+        left:-25%;
+        opacity: 0;
+    }
+}
+.right{
+    position: absolute;
+    right:0;
+    top:200px;
+    font-family: monospace;
+    width:55%;
+    overflow: hidden;
+    height:100%;
+}
+h1{
+    margin:0;
+    padding:0;
+}
+.right table tr:nth-child(2),
+.right table tr:nth-child(4){
+    background-color: #f5f5f5;
+}
+.right table{
+    border-collapse: collapse;
+    position: absolute;
+    top:100px;
+    left: 100%;
+    transition:2s;
+}
+.right table td{
+    padding:3px 10px;
+    border: none;
+}
+.right table img{
+    width:60px;
+}
+.menu{
+    position: absolute;
+    height:70px;
+    background: #fff;
+    box-shadow: 0 0 5px #cac7c7;
+    border-radius: 15px;
+    left:50%;
+    bottom:20px;
+    transform: translate(-50%, 0);
+}
+.menu ul{
+    padding: 0;
+    margin: 0;
+}
+.menu li{
+    list-style: none;
+    width:50px;
+    padding:25px 10px;
+    display: inline-block;
+    border-radius: 15px;
+    text-align: center;
+}
+.menu li:nth-child(4){
+    background-color: #101A1C;
+    color: #fff;
+}
